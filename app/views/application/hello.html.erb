@@ -1,0 +1,9 @@
+<h1>New Site</h1>
+<h1>Hi, <%= session[:name] %>.</h1>
+  <% if session[:name] %>
+    <%= button_to "Logout", logout_path %>
+    <%= link_to "secret", secret_path %>
+   <% else %>
+     <%= link_to "login", login_path %> 
+  <% end %>
+
